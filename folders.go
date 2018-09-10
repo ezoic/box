@@ -83,10 +83,10 @@ func (c *FolderService) GetFolder(folderId string) (*http.Response, *Folder, err
 
 // TODO(ttacon): return the response for the user to play with if they want
 // Documentation: https://developers.box.com/docs/#folders-retrieve-a-folders-items
-func (c *FolderService) GetFolderItems(folderId string) (*http.Response, *ItemCollection, error) {
+func (c *FolderService) GetFolderItems(folderId string, params string) (*http.Response, *ItemCollection, error) {
 	req, err := c.NewRequest(
 		"GET",
-		fmt.Sprintf("/folders/%s/items", folderId),
+		fmt.Sprintf("/folders/%s/items?%s", folderId, params),
 		nil,
 	)
 	if err != nil {

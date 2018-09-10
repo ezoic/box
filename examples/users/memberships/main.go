@@ -4,8 +4,8 @@ import (
 	"flag"
 	"fmt"
 
+	"github.com/kylelemons/godebug/pretty"
 	"github.com/ttacon/box"
-	"github.com/ttacon/pretty"
 	"golang.org/x/oauth2"
 )
 
